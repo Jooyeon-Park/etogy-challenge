@@ -7,6 +7,7 @@ import SignIn from "./Pages/SignIn";
 import Home from "./Pages/Home";
 import { ThemeProvider, styled } from "@mui/material/styles";
 import Theme from "./theme";
+import Projects from "./Pages/Projects";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             <Route exact path="/" element={<Home />} />
 
             <Route exact path="pricing" element={<Pricing />} />
+            <Route exact path="projects" element={<Projects />} />
+
             <Route exact path="signin" element={<SignIn />} />
             <Route exact path="pricing" element={<Pricing />} />
           </Routes>

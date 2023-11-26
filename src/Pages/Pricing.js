@@ -104,16 +104,12 @@ const footers = [
   },
 ];
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
 export default function Pricing() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <>
       <GlobalStyles
         styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
       />
-      <CssBaseline />
 
       {/* Hero unit */}
       <Container
@@ -244,6 +240,6 @@ export default function Pricing() {
         <Copyright sx={{ mt: 5 }} />
       </Container>
       {/* End footer */}
-    </ThemeProvider>
+    </>
   );
 }
