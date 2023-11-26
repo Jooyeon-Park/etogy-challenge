@@ -12,8 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import Link from "@mui/material/Link";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // const StatPrevious = styled("div")(
 //   ({ theme }) => `
 //   color: ${theme.palette.text.secondary};
@@ -61,7 +60,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Link href="/" style={{ textDecoration: "None" }}>
+          <Link to="/" style={{ textDecoration: "None" }}>
             <Typography
               variant="h6"
               noWrap
@@ -115,12 +114,12 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -131,21 +130,19 @@ function ResponsiveAppBar() {
               color: "white",
               textDecoration: "none",
             }}
+            onClick={navigate("/")}
           >
             Etogy
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href={`/${page}`} style={{ textDecoration: "none" }}>
-                <Button
-                  key={page}
-                  href={`/${page}`}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
-              </Link>
+              <Button
+                key={page}
+                onClick={() => handleNavigate(page)}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                {page}
+              </Button>
             ))}
           </Box>
 

@@ -1,7 +1,7 @@
 {
   "name": "etogy-challenge",
   "version": "0.1.0",
-  "homepage": "https://jooyeon-park.github.io/etogy-challenge",
+  "homepage": "https://jooyeon-park.github.io/etogy-challenge/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

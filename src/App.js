@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route, Routes } from "react-router-dom";
 import NavigationBar from "./Components/NavigationBar";
 import Pricing from "./Pages/Pricing";
 import SignIn from "./Pages/SignIn";
@@ -13,21 +13,19 @@ import ContactUs from "./Pages/ContactUs";
 function App() {
   return (
     <ThemeProvider theme={Theme}>
-      <div className="App">
-        <Router>
-          <NavigationBar />
-          <Routes>
-            <Route exact path="/" element={<Home />} />
+      <HashRouter basename="/etogy-challenge">
+        <NavigationBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
 
-            <Route exact path="pricing" element={<Pricing />} />
-            <Route exact path="projects" element={<Projects />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="projects" element={<Projects />} />
 
-            <Route exact path="signin" element={<SignIn />} />
-            <Route exact path="pricing" element={<Pricing />} />
-            <Route exact path="contact us" element={<ContactUs />} />
-          </Routes>
-        </Router>
-      </div>
+          <Route path="signin" element={<SignIn />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="contact us" element={<ContactUs />} />
+        </Routes>
+      </HashRouter>
     </ThemeProvider>
   );
 }
