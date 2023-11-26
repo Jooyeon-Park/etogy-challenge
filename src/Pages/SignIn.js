@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -35,8 +35,19 @@ function Copyright(props) {
 }
 
 export default function SignInSide() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(true);
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(email);
+    if (!isValid) {
+      setIsValidEmail(false);
+      return;
+    }
+
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get("email"),
@@ -95,6 +106,12 @@ export default function SignInSide() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                error={!isValidEmail}
+                helperText={!isValidEmail ? "Email not valid" : ""}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setIsValidEmail(true);
+                }}
               />
               <TextField
                 margin="normal"
