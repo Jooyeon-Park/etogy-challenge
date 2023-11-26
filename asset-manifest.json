@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/etogy-challenge/static/css/main.f855e6bc.css",
-    "main.js": "/etogy-challenge/static/js/main.6c496b75.js",
+    "main.js": "/etogy-challenge/static/js/main.490758fa.js",
     "static/js/787.21c494d6.chunk.js": "/etogy-challenge/static/js/787.21c494d6.chunk.js",
     "static/media/logo.svg": "/etogy-challenge/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/etogy-challenge/index.html",
     "main.f855e6bc.css.map": "/etogy-challenge/static/css/main.f855e6bc.css.map",
-    "main.6c496b75.js.map": "/etogy-challenge/static/js/main.6c496b75.js.map",
+    "main.490758fa.js.map": "/etogy-challenge/static/js/main.490758fa.js.map",
     "787.21c494d6.chunk.js.map": "/etogy-challenge/static/js/787.21c494d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.6c496b75.js"
+    "static/js/main.490758fa.js"
   ]
 }
