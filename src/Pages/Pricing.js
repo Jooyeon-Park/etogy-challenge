@@ -200,7 +200,11 @@ export default function Pricing() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}>
+                  <Button
+                    color="secondary"
+                    fullWidth
+                    variant={tier.buttonVariant}
+                  >
                     {tier.buttonText}
                   </Button>
                 </CardActions>

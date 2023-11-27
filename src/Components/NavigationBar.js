@@ -59,7 +59,18 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1,
+            }}
+          >
+            <img
+              width="50px"
+              src={process.env.PUBLIC_URL + "/Etogy3.png"}
+              alt="Etogy icon"
+            />
+          </Box>
           <Link to="/" style={{ textDecoration: "None" }}>
             <Typography
               variant="h6"
@@ -115,7 +126,18 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+              mr: 1,
+            }}
+          >
+            <img
+              width="50px"
+              src={process.env.PUBLIC_URL + "/Etogy3.png"}
+              alt="Etogy icon"
+            />
+          </Box>
           <Typography
             variant="h5"
             noWrap
@@ -130,7 +152,7 @@ function ResponsiveAppBar() {
               color: "white",
               textDecoration: "none",
             }}
-            onClick={navigate("/")}
+            onClick={() => navigate("/")}
           >
             Etogy
           </Typography>

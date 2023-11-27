@@ -169,26 +169,37 @@ function Projects() {
         item
         xs={12}
         md={8}
-        sx={{ width: "80%", margin: "auto", paddingBottom: "30px" }}
+        sx={{
+          width: { xs: "600px", md: "900px" },
+          textAlign: "left",
+          paddingTop: "15px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
       >
         {projects.map((project, index) => (
           <div key={index}>
             <Typography variant="h5">{project.title}</Typography>
             <Typography variant="body1">{project.description}</Typography>
-            <Button
-              variant="outlined"
-              color="primary"
-              onClick={() => handleEditProject(index)}
-            >
-              Edit
-            </Button>
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={() => handleDeleteProject(index)}
-            >
-              Delete
-            </Button>
+            <Box sx={{ paddingBottom: "40px" }}>
+              <Button
+                variant="outlined"
+                color="primary"
+                onClick={() => handleEditProject(index)}
+              >
+                Edit
+              </Button>
+              <Button
+                variant="outlined"
+                color="secondary"
+                onClick={() => handleDeleteProject(index)}
+              >
+                Delete
+              </Button>
+            </Box>
           </div>
         ))}
       </Grid>
