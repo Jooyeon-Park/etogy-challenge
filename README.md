@@ -2,9 +2,11 @@ Etogy Challenge
 =============
 
 ## Live website
-* Live website: <https://jooyeon-park.github.io/etogy-challenge/>
+<https://jooyeon-park.github.io/etogy-challenge/>
+
+## Overview
 * written in React.js
-* Material UI, Custom theme applied
+* Material UI, Custom theme applied. Thanks to the theme, I can update the colors easily at once.
 * The theme color was from Etogy's official website (Took them from the color info in the dev tools)
 * Applied the website icon and title name --> They are found on a tap
 
